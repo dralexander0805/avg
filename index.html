@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Avgeek Around The Globe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(ellipse at center, #0a0a23 0%, #000000 100%);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #9f7aea, #805ad5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInDown 1s ease;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #a0aec0;
+      margin-bottom: 20px;
+      animation: fadeInDown 1.2s ease;
+    }
+
+    button.stream-button {
+      background: #805ad5;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    button.stream-button:hover {
+      background: #9f7aea;
+      transform: translateY(-3px);
+    }
+
+    /* Flight Cards */
+    .flight-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 600px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .flight {
+      background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(128, 90, 213, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .flight:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(159, 122, 234, 0.7);
+    }
+
+    .flight h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      background: linear-gradient(90deg, #d6bcfa, #b794f4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .flight p {
+      margin: 5px 0 0;
+      color: #cbd5e0;
+    }
+
+    /* Globe */
+    #globe-container {
+      width: 600px;
+      height: 600px;
+      margin-top: 60px;
+      animation: fadeInUp 2s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Avgeek Around The Globe</h1>
+  <p class="subtitle">Flying our trusty Cessna 182 around the circumfrence of the world!</p>
+<a href="https://twitch.tv/theavgeekcentral">
+  <button class="stream-button">Watch Stream</button>
+</a>
+  <div class="flight-container">
+    <div class="flight">
+      <h2>Flight 1 - KLOU ➔ KDCA</h2>
+      <p>Departure: 6:30 PM 4/27</p>
+    </div>
+
+    <div class="flight">
+      <h2>Flight 2 - KDCA ➔ KAUG</h2>
+      <p>Departure: 6:30 PM 4/28</p>
+    </div>
+
+    <div class="flight">
+      <h2>Flight 3 - KAUG ➔ CYHZ</h2>
+      <p>Departure: 6:30 PM 4/29</p>
+    </div>
+  </div>
+
+  <div id="globe-container">
+    <!-- Globe will be added here later -->
+  </div>
+
+</body>
+</html>
